@@ -1,5 +1,5 @@
 class Enemy:
-    def __init__(self, name="Goblin", health=60, damage=15, exp=50):
+    def __init__(self, name="", health=60, damage=15, exp=50):
         self.name = name
         self.health = health
         self.damage = damage

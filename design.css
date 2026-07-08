@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background: #1f1f1f;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    background: #111;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 0;
+    color: gold;
+}
+
+header p {
+    color: #cccccc;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    width: 350px;
+    background: #2b2b2b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 15px black;
+    text-align: center;
+}
+
+.stat-bar {
+    background: #111;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.health-fill {
+    height: 20px;
+    background: crimson;
+    transition: width 0.3s;
+}
+
+.xp-fill {
+    height: 20px;
+    background: royalblue;
+    transition: width 0.3s;
+}
+
+.enemy-fill {
+    height: 20px;
+    background: purple;
+    transition: width 0.3s;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: gold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: orange;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #1a1a1a;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#battleLog {
+    text-align: left;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.log-message {
+    background: #1a1a1a;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+}

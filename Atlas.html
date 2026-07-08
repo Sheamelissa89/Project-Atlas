@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Atlas</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PROJECT ATLAS</h1>
+        <p>The Beginning of an Intelligent RPG Engine</p>
+    </header>
+
+    <main class="game-container">
+
+        <section class="card">
+            <h2>Player Information</h2>
+            <div id="playerStats"></div>
+
+            <div class="button-group">
+                <button id="attackButton">Attack Enemy</button>
+                <button id="healButton">Heal</button>
+                <button id="xpButton">Gain XP</button>
+                <button id="saveButton">Save Game</button>
+                <button id="loadButton">Load Game</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Enemy</h2>
+            <div id="enemyStats"></div>
+
+            <button id="newEnemyButton">Summon New Enemy</button>
+        </section>
+
+        <section class="card">
+            <h2>Inventory</h2>
+            <ul id="inventoryList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Battle Log</h2>
+            <div id="battleLog"></div>
+        </section>
+
+    </main>
+
+    <script src="atlas.js"></script>
+</body>
+</html>

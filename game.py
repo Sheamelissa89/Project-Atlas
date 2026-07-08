@@ -1,8 +1,8 @@
 import random
-
-from player import Player
+from typing import Self
 from enemy import Enemy
 from map import GameMap
+from player import Player
 
 
 class Game:
@@ -18,7 +18,8 @@ class Game:
             Enemy("Dragon", 200, 40, 200),
             Enemy("Dark Knight", 250, 50, 300),
             Enemy("Necromancer", 300, 60, 400),
-            Enemy("Demon Lord", 400, 80, 500)
+            Enemy("Demon Lord", 400, 80, 500),
+            Enemy("Owl of the Night", 350, 70, 450),
         ]
         self.map = GameMap()
 
@@ -51,5 +52,7 @@ class Game:
         if self.player.is_alive():
             print(f"{self.player.name} won the battle!")
             self.player.gain_exp(self.enemy.exp)
+            self.player.after_battle_reward()
         else:
             print(f"{self.player.name} was defeated...")
+    
