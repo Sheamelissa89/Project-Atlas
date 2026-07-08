@@ -1,9 +1,6 @@
-from player import Player
+from game import Game
 
-print("Welcome to Project Atlas")
-print("A Python adventure begins...")
 
-player = Player()
-
-player.take_damage(25)
-player.show_status()
+if __name__ == "__main__":
+    game = Game()
+    game.start()
