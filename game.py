@@ -1,14 +1,15 @@
 import random
-from typing import Self
-from enemy import Enemy
+
+from entities.enemy import Enemy
+from entities.player import Player
 from map import GameMap
-from player import Player
 
 
 class Game:
     def __init__(self):
         self.player = Player()
-        self.enemies = [
+
+        self.entities = [
             Enemy("Slime", 50, 10, 25),
             Enemy("Forest Snake", 80, 20, 75),
             Enemy("Wolf", 100, 25, 100),
@@ -21,6 +22,7 @@ class Game:
             Enemy("Demon Lord", 400, 80, 500),
             Enemy("Owl of the Night", 350, 70, 450),
         ]
+
         self.map = GameMap()
 
     def start(self):
@@ -36,23 +38,23 @@ class Game:
         self.battle()
 
     def battle(self):
-        self.enemy = random.choice(self.enemies[:4])
-        print("A wild enemy appears!")
-        print(f"Enemy: {self.enemy.name}")
+        entity = random.choice(self.entities[:4])
+
+        print("A wild entity appears!")
+        print(f"Entity: {entity.name}")
         print()
 
-        while self.player.is_alive() and self.enemy.is_alive():
-            self.player.attack(self.enemy)
+        while self.player.is_alive() and entity.is_alive():
+            self.player.attack(entity)
             print()
 
-            if self.enemy.is_alive():
-                self.enemy.attack(self.player)
+            if entity.is_alive():
+                entity.attack(self.player)
                 print()
 
         if self.player.is_alive():
             print(f"{self.player.name} won the battle!")
-            self.player.gain_exp(self.enemy.exp)
-            self.player.after_battle_reward()
+            entity.give_rewards(self.player)
         else:
             print(f"{self.player.name} was defeated...")
     
