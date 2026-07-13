@@ -1,250 +1,271 @@
-# 🌍 Project Atlas
+# 🌌 Project Atlas
 
-> **An interactive RPG engine built from scratch while learning software engineering.**
+## *The Beginning of an Intelligent RPG Engine*
 
-![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen)
-![Version](https://img.shields.io/badge/Version-v0.2-blue)
-![Language](https://img.shields.io/badge/Language-JavaScript-yellow)
-![Backend](https://img.shields.io/badge/Backend-Python-blue)
+Project Atlas is a Python-based role-playing game engine currently under active development. What began as a simple console RPG is evolving into a modular framework designed to support intelligent entities, dynamic relationships, emotional decision-making, and eventually a living world where every choice has meaningful consequences.
 
 ---
 
-# 📖 About
+# 🎯 Vision
 
-Project Atlas is my long-term software engineering portfolio project.
+Project Atlas is built around one central philosophy:
 
-Instead of creating many small practice programs, Atlas allows me to continuously
-expand one application while learning new programming concepts.
+> **Every entity should have the ability to grow, change, and react intelligently instead of existing as static game objects.**
 
-Every feature added represents a new software engineering concept including:
+Rather than separating characters into simple categories such as "good" or "evil," Atlas aims to create a world where relationships, emotions, experiences, and player choices influence every encounter.
 
-- Object-Oriented Programming
-- Frontend Development
-- Game Architecture
-- State Management
-- Data Persistence
-- UI Design
-- Backend Development (Upcoming)
+Long-term goals include:
 
-The long-term goal is to transform Atlas into a complete full-stack RPG engine.
+- Dynamic NPC behavior
+- Intelligent companions
+- Adaptive enemy AI
+- Emotional decision systems
+- Reputation and relationship mechanics
+- Living world simulation
+- Modular RPG engine architecture
 
 ---
 
-# ✨ Current Features
+# 🚀 Current Features
 
-## Player System
+## ⚔️ Player System
 
-- Dynamic Health
-- Health Bar
+- Health System
+- Damage System
 - Experience System
-- XP Bar
 - Level Progression
-- Attack Power
-- Gold System
 - Healing
-- Save / Load
+- Inventory Support
 
 ---
 
-## Enemy System
+## 🛡️ Combat System
 
-- 14 Unique Enemy Types
-- Random Enemy Generation
-- Enemy Health
-- Enemy Attack Power
-- XP Rewards
-- Gold Rewards
+- Turn-based combat
+- Enemy damage calculations
+- Experience rewards
+- Victory and defeat handling
 
 ---
 
-## Inventory System
+## 🌍 World System
 
-- Starting Equipment
-- Nearly 20 Collectable Items
-- Random Loot Drops
-- Dynamic Inventory Display
-
----
-
-## Battle System
-
-- Turn-Based Combat
-- Battle Log
-- Player Attacks
-- Enemy Counter Attacks
-- Experience Rewards
-- Gold Rewards
+- Map management
+- Travel between locations
+- Modular world structure
+- Expandable game architecture
 
 ---
 
-## User Interface
+## 👤 Entity System
 
-- Responsive Layout
-- Interactive Buttons
-- Health Bars
-- XP Bars
-- Live Updating Statistics
+Project Atlas now uses a modular entity structure, allowing future expansion without rewriting existing systems.
+
+Current entity modules include:
+
+- Entity (Base Class)
+- Player
+- Enemy
+- NPC *(Framework)*
+- Companion *(Framework)*
+- Boss *(Framework)*
+
+Every future character will inherit common functionality while maintaining unique behaviors.
+
+---
+
+# 🧠 Intelligent Entity Development
+
+Atlas is transitioning from traditional RPG characters into adaptive entities.
+
+Current development includes:
+
+- Emotional parameter framework
+- Individual characteristic planning
+- Trait system planning
+
+Future versions will allow every entity to possess unique personalities that influence:
+
+- Dialogue
+- Combat
+- Cooperation
+- Loyalty
+- Fear
+- Trust
+- Decision making
+- Relationship growth
+
+This creates opportunities where enemies may become allies, companions may leave, and NPCs react differently based on previous encounters.
+
+---
+
+# ❤️ Emotional Parameters
+
+The emotional framework is currently under development.
+
+Planned emotional values include:
+
+- Courage
+- Fear
+- Trust
+- Loyalty
+- Compassion
+- Aggression
+- Curiosity
+- Hope
+- Despair
+- Determination
+
+These values will eventually influence how entities think, react, and evolve throughout gameplay.
+
+---
+
+# 🧬 Characteristics & Traits
+
+Every entity will eventually receive its own characteristic profile.
+
+### 💪 Physical
+
+- Strength
+- Agility
+- Endurance
+- Dexterity
+- Constitution
+
+### 🧠 Mental
+
+- Intelligence
+- Wisdom
+- Perception
+- Creativity
+- Logic
+
+### ❤️ Emotional
+
+- Courage
+- Fear
+- Compassion
+- Trust
+- Curiosity
+- Determination
+- Patience
+- Loyalty
+
+### ⭐ Traits
+
+Examples include:
+
+- Brave
+- Curious
+- Protective
+- Greedy
+- Honorable
+- Aggressive
+- Compassionate
+- Independent
+
+These systems are currently being designed and will allow every entity to develop unique personalities and behaviors.
 
 ---
 
 # 📁 Project Structure
 
-```
-Project Atlas/
+```text
+ProjectAtlas/
 
+├── core/
+│   ├── game.py
+│   ├── map.py
+│   └── world.py
 │
-
-├── assets/
-
-│   ├── fonts/
-
-│   ├── icons/
-
-│   ├── images/
-
-│   └── sounds/
-
+├── entities/
+│   ├── entity.py
+│   ├── player.py
+│   ├── enemy.py
+│   ├── npc.py
+│   ├── companion.py
+│   └── boss.py
 │
-
-├── scripts/
-
-│   ├── atlas.js
-
-│   ├── battle.js
-
-│   ├── enemy.js
-
-│   ├── inventory.js
-
-│   ├── player.js
-
-│   ├── save.js
-
-│   └── ui.js
-
+├── characteristics/
+│   ├── __init__.py
+│   ├── characteristics.py
+│   ├── player.py
+│   ├── slime.py
+│   ├── wolf.py
+│   ├── goblin.py
+│   └── ...
 │
-
-├── Atlas.html
-
-├── design.css
-
+├── main.py
 └── README.md
 ```
 
 ---
 
-# 🛠 Technologies
+# 🔮 Future Development
 
-### Frontend
+Planned systems include:
 
-- HTML5
-- CSS3
-- JavaScript
-
-### Backend (Current Development)
-
-- Python
-
-### Development
-
-- Git
-- GitHub
-- Visual Studio Code
-
-### Planned
-
-- Flask
-- FastAPI
-- SQLite
-- PostgreSQL
-
----
-
-# 🚀 Roadmap
-
-## Version 0.3
-
-- Quest System
-- NPC Dialogue
-- Equipment Slots
-- Character Classes
-
----
-
-## Version 0.4
-
-- Shop
-- Gold Economy Expansion
-- Loot Tables
+- Quest Engine
+- Dialogue Engine
+- Reputation System
+- Companion AI
+- Merchant System
+- Crafting
+- Equipment
 - Skills
-- Character Statistics
+- Magic
+- Save & Load Expansion
+- Procedural World Generation
+- Dynamic Factions
+- Relationship Engine
+- Emotional Memory
+- Intelligent NPC Scheduling
 
 ---
 
-## Version 0.5
+# 📈 Development Progress
 
-- World Map
-- Dungeons
-- Boss Battles
-- Save Profiles
+### ✅ Completed
 
----
+- Modular project architecture
+- Entity inheritance system
+- Player progression
+- Combat mechanics
+- World module
+- Map system
+- Inventory framework
+- Experience system
 
-## Version 1.0
+### 🚧 In Progress
 
-- Python Backend
-- Login System
-- Database
-- User Accounts
-- Multiplayer Foundation
+- Emotional parameter system
+- Characteristics framework
+- Individual entity profiles
+- Trait system
 
----
+### 📋 Planned
 
-# 📅 Development Journal
-
-## July 2026
-
-### Initial Development
-
-- Created Atlas project
-- Built HTML frontend
-- Added CSS interface
-- Added JavaScript game engine
-- Implemented Player class
-- Added Enemy system
-- Added Inventory
-- Added Battle Log
-- Added Health & XP bars
-- Implemented Leveling
-- Added Save / Load functionality
-- Expanded to 14 enemy types
-- Expanded inventory to nearly 20 items
-- Refactored project into modular JavaScript files
-- Organized assets into professional project folders
-
----
-
-# 🎯 Current Goal
-
-Continue transforming Atlas into a professional full-stack RPG engine while
-learning software engineering through practical application.
+- Companion AI
+- NPC interactions
+- Quest system
+- Reputation mechanics
+- Dynamic world simulation
+- Intelligent decision-making
 
 ---
 
 # 👨‍💻 Developer
 
-**Shea Mullin**
+**Created by Shea Mullin**
 
-Software Engineering Student
+Project Atlas serves as both a software engineering learning project and an exploration into adaptive game design.
 
-Building one project while continuously improving software engineering skills.
+Every milestone represents another step toward building an intelligent RPG engine where player choices, emotional growth, and evolving entity behavior shape a unique experience.
 
 ---
 
-# ⭐ Future Vision
+## 📜 License
 
-Project Atlas is intended to evolve beyond a simple browser game into a complete
-software engineering portfolio demonstrating frontend, backend, databases,
-software architecture, and full-stack development.
+This project is currently under active personal development.
 
-Every feature added is another step toward that goal.
+© Shea Mullin — All Rights Reserved.
