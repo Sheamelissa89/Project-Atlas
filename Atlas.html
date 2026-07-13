@@ -2,58 +2,207 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Project Atlas - The Beginning of an Intelligent RPG Engine"
+    >
+
     <title>Project Atlas</title>
+
     <link rel="stylesheet" href="design.css">
+    
 </head>
 
 <body>
+    <header class="game-header">
+        <div class="header-content">
+            <p class="game-subtitle">
+                The Beginning of an Intelligent RPG Engine
+            </p>
 
-    <header>
-        <h1>PROJECT ATLAS</h1>
-        <p>The Beginning of an Intelligent RPG Engine</p>
+            <h1>Project Atlas</h1>
+
+            <p class="game-description">
+                Every decision shapes the path ahead.
+            </p>
+        </div>
     </header>
 
     <main class="game-container">
+        <!-- Player and enemy information -->
+        <section class="battle-dashboard">
+            <article class="game-panel player-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="panel-label">Hero</p>
+                        <h2>Player Status</h2>
+                    </div>
 
-        <section class="card">
-            <h2>Player Information</h2>
-            <div id="playerStats"></div>
+                    <span class="status-badge player-badge">
+                        Active
+                    </span>
+                </div>
 
-            <div class="button-group">
-                <button id="attackButton">Attack Enemy</button>
-                <button id="healButton">Heal</button>
-                <button id="xpButton">Gain XP</button>
-                <button id="saveButton">Save Game</button>
-                <button id="loadButton">Load Game</button>
+                <div
+                    id="playerStats"
+                    class="stats-container"
+                ></div>
+            </article>
+
+            <div class="versus-symbol" aria-hidden="true">
+                VS
+            </div>
+
+            <article class="game-panel enemy-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="panel-label">Opponent</p>
+                        <h2>Enemy Status</h2>
+                    </div>
+
+                    <span
+                        id="enemyStatusBadge"
+                        class="status-badge enemy-badge"
+                    >
+                        Hostile
+                    </span>
+                </div>
+
+                <div
+                    id="enemyStats"
+                    class="stats-container"
+                ></div>
+            </article>
+        </section>
+
+        <!-- Main game controls -->
+        <section class="game-panel controls-panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="panel-label">Actions</p>
+                    <h2>Battle Controls</h2>
+                </div>
+            </div>
+
+            <div class="control-grid">
+                <button
+                    id="attackButton"
+                    class="game-button attack-button"
+                    type="button"
+                >
+                    <span class="button-icon" aria-hidden="true">⚔</span>
+                    Attack
+                </button>
+
+                <button
+                    id="healButton"
+                    class="game-button heal-button"
+                    type="button"
+                >
+                    <span class="button-icon" aria-hidden="true">✦</span>
+                    Recover
+                </button>
+
+                <button
+                    id="xpButton"
+                    class="game-button xp-button"
+                    type="button"
+                >
+                    <span class="button-icon" aria-hidden="true">★</span>
+                    Gain XP
+                </button>
+
+                <button
+                    id="newEnemyButton"
+                    class="game-button enemy-button"
+                    type="button"
+                >
+                    <span class="button-icon" aria-hidden="true">☠</span>
+                    New Enemy
+                </button>
+
+                <button
+                    id="saveButton"
+                    class="game-button save-button"
+                    type="button"
+                >
+                    <span class="button-icon" aria-hidden="true">◆</span>
+                    Save Game
+                </button>
+
+                <button
+                    id="loadButton"
+                    class="game-button load-button"
+                    type="button"
+                >
+                    <span class="button-icon" aria-hidden="true">↻</span>
+                    Load Game
+                </button>
             </div>
         </section>
 
-        <section class="card">
-            <h2>Enemy</h2>
-            <div id="enemyStats"></div>
+        <!-- Inventory -->
+        <section class="game-panel inventory-panel">
+            <div class="panel-heading inventory-heading">
+                <div>
+                    <p class="panel-label">Equipment and Supplies</p>
+                    <h2>Inventory</h2>
+                </div>
 
-            <button id="newEnemyButton">Summon New Enemy</button>
+                <div class="inventory-summary">
+                    <span id="inventoryCount">0 items</span>
+                </div>
+            </div>
+
+            <p class="section-instructions">
+                Use consumables, equip weapons and armor, or drop items
+                you no longer need.
+            </p>
+
+            <ul
+                id="inventoryList"
+                class="inventory-grid"
+            ></ul>
         </section>
 
-        <section class="card">
-            <h2>Inventory</h2>
-            <ul id="inventoryList"></ul>
-        </section>
+        <!-- Battle log -->
+        <section class="game-panel log-panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="panel-label">Recent Events</p>
+                    <h2>Battle Log</h2>
+                </div>
 
-        <section class="card">
-            <h2>Battle Log</h2>
-            <div id="battleLog"></div>
-        </section>
+                <button
+                    id="clearLogButton"
+                    class="small-button"
+                    type="button"
+                >
+                    Clear Log
+                </button>
+            </div>
 
+            <div
+                id="battleLog"
+                class="battle-log"
+                aria-live="polite"
+            ></div>
+        </section>
     </main>
 
-    <script src="scripts/inventory.js"></script>
-    <script src="scripts/player.js"></script>
-    <script src="scripts/enemy.js"></script>
-    <script src="scripts/ui.js"></script>
-    <script src="scripts/battle.js"></script>
-    <script src="scripts/save.js"></script>
-    <script src="scripts/atlas.js"></script>
+    <footer class="game-footer">
+        <p>
+            Project Atlas — Your choices create the world.
+        </p>
+    </footer>
+
+    <script src="main.js" defer></script>
+
 </body>
 </html>
