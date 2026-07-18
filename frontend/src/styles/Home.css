@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top, rgba(83, 58, 140, 0.35), transparent 35%),
+    linear-gradient(135deg, #090b16 0%, #151126 50%, #070912 100%);
+  color: #f4f0ff;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.home-page {
+  min-height: 100vh;
+  padding: 60px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-page h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow:
+    0 0 10px rgba(185, 157, 255, 0.75),
+    0 0 30px rgba(112, 75, 190, 0.65);
+}
+
+.home-page h2 {
+  max-width: 850px;
+  margin: 18px 0 28px;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 400;
+  color: #cdbcf7;
+}
+
+.home-page > p {
+  max-width: 850px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d7d1e4;
+}
+
+.features {
+  width: min(850px, 100%);
+  margin-top: 42px;
+  padding: 30px;
+  border: 1px solid rgba(199, 178, 255, 0.3);
+  border-radius: 18px;
+  background: rgba(20, 17, 38, 0.78);
+  box-shadow:
+    0 18px 50px rgba(0, 0, 0, 0.45),
+    inset 0 0 30px rgba(111, 76, 184, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.features h3 {
+  margin: 0 0 22px;
+  font-size: 1.7rem;
+  color: #efe8ff;
+}
+
+.features ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.features li {
+  padding: 14px 18px;
+  border: 1px solid rgba(190, 166, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #e7defa;
+  font-size: 1rem;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.features li:hover {
+  transform: translateY(-3px);
+  background: rgba(153, 112, 232, 0.14);
+  border-color: rgba(203, 181, 255, 0.55);
+}
+
+@media (max-width: 650px) {
+  .home-page {
+    padding: 40px 18px;
+  }
+
+  .home-page h1 {
+    letter-spacing: 0.06em;
+  }
+
+  .features {
+    padding: 22px;
+  }
+
+  .features ul {
+    grid-template-columns: 1fr;
+  }
+}
