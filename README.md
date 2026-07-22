@@ -1,266 +1,176 @@
-# 🌌 Project Atlas
+# 🌍 Project Atlas
 
-## *The Beginning of an Intelligent RPG Engine*
-
-Project Atlas is a Python-based role-playing game engine currently under active development. What began as a simple console RPG is evolving into a modular framework designed to support intelligent entities, dynamic relationships, emotional decision-making, and eventually a living world where every choice has meaningful consequences.
+# ⚔️ A Modular RPG Engine
 
 ---
 
-# 🎯 Vision
+## 📖 Project Overview
 
-Project Atlas is built around one central philosophy:
+Project Atlas is a modular RPG engine currently being developed using both
+Python and React.
 
-> **Every entity should have the ability to grow, change, and react intelligently instead of existing as static game objects.**
+Rather than building a single game, Atlas is designed as a scalable game
+engine where independent systems work together to create a living,
+interactive world.
 
-Rather than separating characters into simple categories such as "good" or "evil," Atlas aims to create a world where relationships, emotions, experiences, and player choices influence every encounter.
-
-Long-term goals include:
-
-- Dynamic NPC behavior
-- Intelligent companions
-- Adaptive enemy AI
-- Emotional decision systems
-- Reputation and relationship mechanics
-- Living world simulation
-- Modular RPG engine architecture
+Every major gameplay mechanic is built as its own module, allowing new
+features to be added without rewriting the entire application.
 
 ---
 
-# 🚀 Current Features
+## 🎯 Project Vision
 
-## ⚔️ Player System
+Project Atlas explores the idea that every choice has consequences.
 
-- Health System
-- Damage System
-- Experience System
-- Level Progression
-- Healing
-- Inventory Support
+Instead of every encounter ending in combat, players may solve situations
+through observation, dialogue, relationships, wisdom, or combat depending
+on their decisions.
 
----
-
-## 🛡️ Combat System
-
-- Turn-based combat
-- Enemy damage calculations
-- Experience rewards
-- Victory and defeat handling
+The long-term goal is to create an RPG engine that simulates both the
+external world and the internal development of the player.
 
 ---
 
-## 🌍 World System
+# 🛠 Current Technologies
 
-- Map management
-- Travel between locations
-- Modular world structure
-- Expandable game architecture
+### Frontend
 
----
+- React
+- React Router
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Vite
 
-## 👤 Entity System
+### Backend
 
-Project Atlas now uses a modular entity structure, allowing future expansion without rewriting existing systems.
+- Python
 
-Current entity modules include:
+### Planned Technologies
 
-- Entity (Base Class)
-- Player
-- Enemy
-- NPC *(Framework)*
-- Companion *(Framework)*
-- Boss *(Framework)*
-
-Every future character will inherit common functionality while maintaining unique behaviors.
-
----
-
-# 🧠 Intelligent Entity Development
-
-Atlas is transitioning from traditional RPG characters into adaptive entities.
-
-Current development includes:
-
-- Emotional parameter framework
-- Individual characteristic planning
-- Trait system planning
-
-Future versions will allow every entity to possess unique personalities that influence:
-
-- Dialogue
-- Combat
-- Cooperation
-- Loyalty
-- Fear
-- Trust
-- Decision making
-- Relationship growth
-
-This creates opportunities where enemies may become allies, companions may leave, and NPCs react differently based on previous encounters.
+- Zustand
+- FastAPI
+- SQLite / PostgreSQL
+- REST API
+- Authentication
+- Save System
 
 ---
 
-# ❤️ Emotional Parameters
+# 🧩 Engine Architecture
 
-The emotional framework is currently under development.
+```
+Project Atlas
 
-Planned emotional values include:
-
-- Courage
-- Fear
-- Trust
-- Loyalty
-- Compassion
-- Aggression
-- Curiosity
-- Hope
-- Despair
-- Determination
-
-These values will eventually influence how entities think, react, and evolve throughout gameplay.
-
----
-
-# 🧬 Characteristics & Traits
-
-Every entity will eventually receive its own characteristic profile.
-
-### 💪 Physical
-
-- Strength
-- Agility
-- Endurance
-- Dexterity
-- Constitution
-
-### 🧠 Mental
-
-- Intelligence
-- Wisdom
-- Perception
-- Creativity
-- Logic
-
-### ❤️ Emotional
-
-- Courage
-- Fear
-- Compassion
-- Trust
-- Curiosity
-- Determination
-- Patience
-- Loyalty
-
-### ⭐ Traits
-
-Examples include:
-
-- Brave
-- Curious
-- Protective
-- Greedy
-- Honorable
-- Aggressive
-- Compassionate
-- Independent
-
-These systems are currently being designed and will allow every entity to develop unique personalities and behaviors.
-
----
-
-# 📁 Project Structure
-
-```text
-ProjectAtlas/
-
-├── core/
-│   ├── game.py
-│   ├── map.py
-│   └── world.py
+Frontend (React)
 │
-├── entities/
-│   ├── entity.py
-│   ├── player.py
-│   ├── enemy.py
-│   ├── npc.py
-│   ├── companion.py
-│   └── boss.py
+├── Components
+├── Features
+├── Pages
+├── Services
+├── Store
+└── Styles
+
+Backend (Python)
 │
-├── characteristics/
-│   ├── __init__.py
-│   ├── characteristics.py
-│   ├── player.py
-│   ├── slime.py
-│   ├── wolf.py
-│   ├── goblin.py
-│   └── ...
-│
-├── main.py
-└── README.md
+├── Entities
+├── Core Engine
+├── Combat
+├── Inventory
+├── World
+└── Scripts
 ```
 
 ---
 
-# 🔮 Future Development
+# ⚙️ Modular Systems
 
-Planned systems include:
+Each major feature is developed as an independent system.
 
-- Quest Engine
-- Dialogue Engine
+Current and planned systems include:
+
+- Character System
+- Battle System
+- Inventory System
+- Equipment System
+- World Exploration System
+- Companion System
+- Quest System
+- Journal System
+- Dialogue System
 - Reputation System
-- Companion AI
-- Merchant System
-- Crafting
-- Equipment
-- Skills
-- Magic
-- Save & Load Expansion
-- Procedural World Generation
-- Dynamic Factions
-- Relationship Engine
-- Emotional Memory
-- Intelligent NPC Scheduling
+- Relationship System
+- Emotion System
+- Crafting System
+- Trading System
+- Save / Load System
 
 ---
 
-# 📈 Development Progress
+# 🎮 Current Features
 
-### ✅ Completed
+- React Single Page Application
+- React Router Navigation
+- Modular Folder Structure
+- Character Page
+- Inventory Page
+- World Page
+- Battle Page
+- Quest Page
+- Companion Page
+- Journal Page
+- Responsive User Interface
 
-- Modular project architecture
-- Entity inheritance system
-- Player progression
-- Combat mechanics
-- World module
-- Map system
-- Inventory framework
-- Experience system
+---
 
-### 🚧 In Progress
+# 🚀 Development Roadmap
 
-- Emotional parameter system
-- Characteristics framework
-- Individual entity profiles
-- Trait system
+### Phase 1
+- React application structure
+- Routing
+- Modular architecture
+- UI prototypes
 
-### 📋 Planned
+### Phase 2
+- Interactive Battle System
+- Inventory management
+- Character progression
+- World navigation
 
-- Companion AI
-- NPC interactions
-- Quest system
-- Reputation mechanics
+### Phase 3
+- Backend integration
+- Enemy AI
+- Quest engine
+- Save system
+
+### Phase 4
 - Dynamic world simulation
-- Intelligent decision-making
+- Reputation system
+- Companion relationships
+- Dialogue engine
 
 ---
 
-# 👨‍💻 Developer
+# 💡 Design Philosophy
 
-**Created by Shea Mullin**
+Project Atlas follows a modular architecture.
 
-Project Atlas serves as both a software engineering learning project and an exploration into adaptive game design.
+Each gameplay mechanic is built as an independent system composed of
+reusable React components and Python modules.
 
-Every milestone represents another step toward building an intelligent RPG engine where player choices, emotional growth, and evolving entity behavior shape a unique experience.
+This approach makes Atlas easier to maintain, easier to expand, and allows
+new gameplay systems to be added without affecting existing features.
+
+---
+
+# 🌟 Long-Term Goal
+
+The long-term objective is to create an expandable RPG engine that combines
+software engineering principles with immersive world-building.
+
+Rather than being a single finished game, Atlas is intended to become a
+framework capable of supporting rich stories, evolving characters,
+meaningful choices, and interconnected gameplay systems.
 
 ---
 
