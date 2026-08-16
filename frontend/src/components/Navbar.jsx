@@ -4,9 +4,7 @@ import "../styles/NavBar.css";
 function NavBar() {
   return (
     <header className="atlas-header">
-      <NavLink className="atlas-logo" to="/">
-        🏔️ Project Atlas
-      </NavLink>
+      
 
       <nav className="atlas-navigation">
         <NavLink to="/">Home</NavLink>

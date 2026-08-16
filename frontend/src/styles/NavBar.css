@@ -1,46 +1,195 @@
 .atlas-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  min-height: 74px;
+  padding: 0.9rem clamp(1rem, 3vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 1rem 2rem;
-  background: #111827;
-  border-bottom: 1px solid #334155;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.97),
+      rgba(17, 24, 39, 0.95)
+    );
+  border-bottom: 1px solid rgba(113, 139, 208, 0.3);
+  box-shadow:
+    0 8px 24px rgba(2, 6, 18, 0.3),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(14px);
 }
 
 .atlas-logo {
-  color: #f8e7b5;
-  font-size: 1.3rem;
-  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #a8d89b;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
   text-decoration: none;
   white-space: nowrap;
+  text-shadow:
+    0 0 8px rgba(166, 115, 207, 0.7),
+    0 0 18px rgba(105, 176, 121, 0.35);
+}
+
+.atlas-logo:hover {
+  color: #c4a7e7;
+}
+
+.atlas-logo-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 7px rgba(164, 114, 207, 0.55));
+  transition:
+    transform 0.25s ease,
+    filter 0.25s ease;
+}
+
+.atlas-logo:hover .atlas-logo-icon {
+  transform: translateY(-2px) scale(1.04);
+  filter:
+    drop-shadow(0 0 8px rgba(164, 114, 207, 0.75))
+    drop-shadow(0 0 12px rgba(105, 176, 121, 0.35));
+}
+
+.atlas-logo::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(213, 185, 111, 0.8),
+      transparent
+    );
+  transform: scaleX(0);
+  transition: transform 180ms ease;
+}
+
+.atlas-logo:hover {
+  color: #fff2c9;
+  text-shadow: 0 0 18px rgba(248, 231, 181, 0.3);
+}
+
+.atlas-logo:hover::after {
+  transform: scaleX(1);
+}
+
+.atlas-logo:focus-visible,
+.atlas-navigation a:focus-visible {
+  outline: 3px solid rgba(247, 231, 180, 0.82);
+  outline-offset: 3px;
 }
 
 .atlas-navigation {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  justify-content: flex-end;
+  gap: 0.35rem;
 }
 
 .atlas-navigation a {
+  position: relative;
+  padding: 0.6rem 0.82rem;
   color: #dbeafe;
-  padding: 0.55rem 0.8rem;
-  border-radius: 8px;
+  border: 1px solid transparent;
+  border-radius: 9px;
   text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
 }
 
 .atlas-navigation a:hover {
-  background: #1e293b;
+  transform: translateY(-1px);
+  color: #ffffff;
+  background: rgba(51, 65, 85, 0.72);
+  border-color: rgba(113, 139, 208, 0.2);
 }
 
 .atlas-navigation a.active {
-  background: #334155;
-  color: white;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(70, 95, 156, 0.88),
+      rgba(51, 65, 85, 0.92)
+    );
+  border-color: rgba(213, 185, 111, 0.55);
+  box-shadow:
+    0 5px 15px rgba(3, 8, 20, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .atlas-header {
+    gap: 1rem;
+  }
+
+  .atlas-navigation {
+    gap: 0.2rem;
+  }
+
+  .atlas-navigation a {
+    padding: 0.55rem 0.65rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .atlas-header {
+    position: sticky;
+    min-height: auto;
+    padding: 0.8rem 1rem 0.65rem;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 0.55rem;
+  }
+
+  .atlas-logo {
+    align-self: flex-start;
+  }
+
+  .atlas-navigation {
+    margin: 0 -1rem;
+    padding: 0.2rem 1rem 0.45rem;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.3rem;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color:
+      rgba(113, 139, 208, 0.55)
+      transparent;
+  }
+
+  .atlas-navigation a {
+    flex: 0 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atlas-logo,
+  .atlas-logo::after,
+  .atlas-navigation a {
+    transition: none;
+  }
+
+  .atlas-navigation a:hover {
+    transform: none;
   }
 }
